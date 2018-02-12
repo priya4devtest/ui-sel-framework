@@ -74,7 +74,37 @@ public class SearchFlights {
 
         // Check the title of the page
         System.out.println("Page title is: " + driver.getTitle());
-        
+
+        //select default flights
+        WebElement reserveFlights = driver.findElement(By.name("reserveFlights"));
+        reserveFlights.click();
+
+        // Check the title of the page
+        System.out.println("Page title is: " + driver.getTitle());
+
+        //Enter First Name
+        WebElement firstName = driver.findElement(By.name("passFirst0"));
+        firstName.sendKeys("Priya");
+
+        //Enter Last Name
+        WebElement lastName = driver.findElement(By.name("passLast0"));
+        lastName.sendKeys("Kesapragada");
+
+        //Enter CreditCard Number
+        WebElement creditnumber = driver.findElement(By.name("creditnumber"));
+        creditnumber.sendKeys("1111111111111111");
+
+        //select ticketless checkbox
+        WebElement ticketLess = driver.findElement(By.name("ticketLess"));
+        ticketLess.click();
+
+        //buy flights
+        WebElement buyFlights = driver.findElement(By.name("buyFlights"));
+        buyFlights.click();
+
+        // Check the title of the page
+        System.out.println("Page title is: " + driver.getTitle());
+
         //Close the browser
         driver.quit();
     }
